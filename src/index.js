@@ -6,7 +6,6 @@ import List from './modules/List.js';
 
 const ulList = document.getElementById('dynamic-list');
 let toDoLists = [];
-let checkboxes = document.querySelectorAll('.checkbox');
 
 const viewPage = () => {
   const local = new List();
@@ -21,10 +20,10 @@ const viewPage = () => {
                           <div class="list">
           
                             <label for="${list.index}"><s>${list.description
-          }</s></label>
+}</s></label>
                           </div>
                           <button type="button" id= "${list.index - 1
-          }" class="deleteList">
+}" class="deleteList">
                           <i class="fa-solid fa-trash-can"></i>
                           </button>
                         </li>  
@@ -35,10 +34,10 @@ const viewPage = () => {
                           <div class="list">
         
                             <label for="${list.index}">${list.description
-          }</label>
+}</label>
                           </div>
                           <button type="button" id= "${list.index - 1
-          }" class="deleteList">
+}" class="deleteList">
                           <i class="fa-solid fa-trash-can"></i>
                           </button>
                         </li>  
@@ -66,7 +65,6 @@ const viewPage = () => {
      </form>
      <div></div>
      `;
-
     });
   });
 

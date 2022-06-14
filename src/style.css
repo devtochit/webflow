@@ -61,7 +61,6 @@ button:hover {
 
 .to-do-list h1 {
   margin-bottom: 3rem;
- 
 }
 
 .fa-list-check {
@@ -88,16 +87,17 @@ button:hover {
 }
 
 .list-add {
-  margin:4rem 8rem ;
+  margin: 4rem 8rem;
 }
 
-main{
+main {
   display: flex;
   flex-direction: row-reverse;
   align-content: stretch;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+
 input,
 input:focus {
   /* border: none; */
@@ -107,7 +107,6 @@ input:focus {
   transition: 0.5s;
   width: 155%;
   color: #0a0a09;
-
 }
 
 .list-add input:focus {
