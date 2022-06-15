@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. A simple website that allows user to create a To-do list.
+> "leaderboard  is a tool that helps to organize scores . It simply database for keeping scores. A simple website that allows user to create a leaderboard scoring.
 
 ## Built With
 
