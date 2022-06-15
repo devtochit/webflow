@@ -50,6 +50,10 @@ button:hover {
   opacity: 0.7;
 }
 
+.list-add {
+  padding: 10px;
+}
+
 .to-do-list {
   text-align: center;
   margin-top: 5rem;
@@ -78,15 +82,13 @@ button:hover {
 .list-heading {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 3px;
 }
 
 .list-heading h2 {
   font-size: 20px;
   font-weight: 400;
 }
-
-
 
 main {
   display: flex;
@@ -159,21 +161,22 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
+  .list-add {
+    margin: 10rem 8rem;
   }
-.list-add {
-  margin: 10rem 8rem;
-}
+
   .list-container {
-    width: 700px;
+    width: 600px;
   }
-  
-button {
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
-  transition: 0.5s;
-  position: relative;
-  margin-left: 199px;
-}
+
+  button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    margin-left: 199px;
+  }
 }
