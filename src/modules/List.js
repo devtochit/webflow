@@ -11,7 +11,7 @@ export default class List {
     return [];
   };
 
-  addList = (todoListData) => {
+  AddScoreToGame = (todoListData) => {
     localStorage.setItem('todoList', JSON.stringify(todoListData));
   };
 

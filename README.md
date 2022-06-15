@@ -1,19 +1,25 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leaderboard
+# Leaderboard App
 
-> "leaderboard  is a tool that helps to organize scores . It simply database for keeping scores. A simple website that allows user to create a leaderboard scoring.
+> This is an app that allows users to add theirs scores to the Leaderboard API.
 
 ## Built With
 
-- HTML5
-- CSS3
-- Javascript ES6
-- Webpack
+- **Languages:**
+  - HTML5 & CSS3
+  - JavaScript
 
-## Live Demo
+- **Preprocessors:**
+  - Sass
 
-[Live Demo Link](https://darikmohammed.github.io/TodoList-Webpack/)
+- **Technologies:**
+  - Webpack
+
+- **Conventions and Methodologies:**
+  - Atomic Design
+  - BEM
+  - MVP pattern
 
 ## Getting Started
 
@@ -21,34 +27,38 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Visual Studio code or any Code Editor.
+- Web Browser (e.g. Firefox, Chrome, Edge)
+- NPM (Node Package Manager)
 
 ### Setup
 
-#### Download the file to local directory
+Download the code from this repository.
 
-- if you have already insall github in your local pc run:
+### Install
 
-```sh
-git clone git@github.com:HeDevedUp/TodoList-Webpack.git
+1- Install the project dependencies using this command on the root project directory:
+
+```console
+$ npm install
 ```
 
-- Or download the zip file from the github directory.
+2- Then, run this command to build the application's code:
 
-#### Linters tests
+```console
+$ npm run build
+```
 
-- Lighthouse
-- Webhint
-- Stylelint
-- node_modules checker
+### Usage
+
+Open the ``index.html`` file inside the ``dist/`` folder in your Web Browser.
 
 ## Authors
 
-👤 **uzoma jesse**
+👤 **Gabriel Santo**
 
-- GitHub: [@githubhandle](https://github.com/HeDevedUp)
-- Twitter: [@twitterhandle](https://twitter.com/devtochi)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jesseuzoma/)
+- GitHub: [@HeDevedUp](https://github.com/HeDeved)
+- Twitter: [@devtochi](https://twitter.com/devtochi)
+- LinkedIn: [jesse uzoma](https://linkedin.com/in/jesseuzoma/)
 
 ## 🤝 Contributing
 
@@ -60,18 +70,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
-
-
-
-
-
-
