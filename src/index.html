@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard card</title>
+</head>
+
+<body>
+    <nav class="header">
+        <ul>
+            <li>LeaderBoard </li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="list-add">
+
+            <h2> Add your score</h2>
+            <form action="#" method="get" id="list-form" class="add-form">
+                <input type="text" name="add-list" class="add-list" placeholder="add your name" required>
+                <input type="text" name="add-list" class="add-score" placeholder=" add your score" required>
+                <button type="submit" class="submit"> Submit <i class="fa-solid fa-check"></i></button>
+            </form>
+        </div>
+        <section class="to-do-list">
+
+            <div class="list-container">
+                <div class="list-heading">
+                    <h1 class="">Recent Scores </h1>
+                    <button type="submit" class="refresh-list">
+                        refresh<i class="fa-solid fa-arrows-rotate"></i></button>
+                </div>
+                <hr>
+
+
+                <hr>
+                <div class="view-list">
+                    <ul id="dynamic-list">
+                        <!-- dynamically create a to-do List -->
+                    </ul>
+                </div>
+                <hr>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
