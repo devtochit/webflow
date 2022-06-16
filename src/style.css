@@ -184,6 +184,9 @@ form {
   flex-basis: 100%;
   justify-content: space-between;
 }
+.todo-list:nth-child(odd) {
+background-color: #685d5b;
+}
 
 @media (min-width: 768px) {
   .to-do-list {
