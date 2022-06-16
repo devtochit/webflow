@@ -12,7 +12,7 @@ export const createGame = async (gameName) => {
     return response.data.result.slice(15, 34)
 }
 
-export const AddScoreToGame = async (score) => {
+export const sendData = async (score) => {
     await api.post(`/games/${GAME_ID}/scores`, score);
 }
 
@@ -20,3 +20,4 @@ export const getGameScores = async () => {
     const response = await api.post(`/games/${GAME_ID}/scores`)
     return response.data.result;
 }
+

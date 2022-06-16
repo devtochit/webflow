@@ -3,7 +3,6 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import './style.css';
 import Sortable from 'sortablejs';
 import List from './modules/List.js';
-import { AddScoreToGame, getGameScores } from './modules/api'
 
 const ulList = document.getElementById('dynamic-list');
 let toDoLists = [];
@@ -15,22 +14,9 @@ const viewPage = () => {
   if (toDoLists.length) {
     ulList.innerHTML = '';
     toDoLists.forEach((list) => {
-      if (list.completed) {
-        ulList.innerHTML += ` 
-                        <li id="${list.index - 1}" class = "todo-list" >
-                          <div class="list">
-          
-                            <label for="${list.index}"><s>${list.description
-          }</s></label>
-                          </div>
-                          <button type="button" id= "${list.index - 1
-          }" class="deleteList">
-                          <i class="fa-solid fa-trash-can"></i>
-                          </button>
-                        </li>  
-                          `;
-      } else {
-        ulList.innerHTML += ` 
+      if (list) {
+
+        ulList.innerHTML += ` w
                         <li id="${list.index - 1}" class = "todo-list" >
                           <div class="list">
         
@@ -49,26 +35,6 @@ const viewPage = () => {
     ulList.innerHTML = '<li>No score to Preview. Add New !</li>';
   }
 
-  // eventlistener for editing
-  const listLi = document.querySelectorAll('.todo-list');
-  listLi.forEach((list) => {
-    list.addEventListener('dblclick', () => {
-      const localList = new List();
-      const todoListsLocal = localList.getList();
-      const editId = list.getAttribute('id') * 1;
-      list.innerHTML = `
-     <form action= "#" class= "edit-form" id= "edit${editId}"> 
-       <div>
-         <i class="fa-solid fa-pen-to-square"></i>
-         <input type="text" id="input-edit${editId}" value="${todoListsLocal[editId].description}">
-       </div>
-       <button type ="submit" > <i class="fa-solid fa-check"></i></button>
-     </form>
-     <div></div>
-     `;
-    });
-  });
-
   // eventlistener for deleteBtn
   const buttons = document.querySelectorAll('.deleteList');
   buttons.forEach((button) => {
@@ -81,56 +47,32 @@ const viewPage = () => {
   });
 
   //   //drag and drop event listeners
+  const form = document.querySelector('#list-form');
 
-  const listContainer = document.querySelector('#dynamic-list');
-  Sortable.create(listContainer, {
-    onEnd() {
-      const liList = document.querySelectorAll('.todo-list');
-      const listArray = [];
-      const listClass = new List();
-      liList.forEach((list) => {
-        listArray.push(list.getAttribute('id') * 1);
-      });
-      listClass.reorder(listArray);
-      viewPage();
-    },
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const localList = new List();
+    const value = document.querySelector('#add-list');
+    const score = document.querySelector('#add-score');
+    // const todoListLocal = localList.getList();
+
+    AddScoreToGame = ({
+      description: ` ${value.value} : ${score.value}`,
+    })
+    // localList.AddScoreToGame(todoListLocal);
+    value.value = '';
+    score.value = '';
+    viewPage();
   });
-};
-
-viewPage();
-
-const form = document.querySelector('#list-form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const localList = new List();
-  const value = document.querySelector('#add-list');
-  const score = document.querySelector('#add-score');
-  const todoListLocal = localList.getList();
-
-  AddScoreToGame = ({
-    description: ` ${value.value} : ${score.value}`,
-  })
-
-  localList.AddScoreToGame(todoListLocal);
-  value.value = '';
-  score.value = '';
-  viewPage();
-});
-
-const deleteChecked = document.querySelector('.delete-checked');
-deleteChecked.addEventListener('click', () => {
-  const localList = new List();
-  localList.deleteCompleted();
-  viewPage();
-});
+  const deleteChecked = document.querySelector('.delete-checked');
+  deleteChecked.addEventListener('click', () => {
+    const localList = new List();
+    localList.deleteCompleted();
+    viewPage();
+  });
 
 
-const refresh = document.querySelector('.refresh-list');
-refresh.addEventListener('click', handleclick());
+  const refresh = document.querySelector('.refresh-list');
+  refresh.addEventListener('click');
+}
 
-async function handleclick() {
-  const newScores = await getGameScores();
-  todoListLocal.push(newScores);
-  viewPage();
-} 
