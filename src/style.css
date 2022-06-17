@@ -40,15 +40,13 @@ button {
 }
 
 .header {
-margin-left: 15px;
-color: #a09a9a;
-font-size: 34px;
-font-weight: 900;
-margin-right: 360px;
-text-shadow: 1px 1px 2px rgb(23, 20, 20);
+  margin-left: 15px;
+  color: #a09a9a;
+  font-size: 34px;
+  font-weight: 900;
+  margin-right: 360px;
+  text-shadow: 1px 1px 2px rgb(23, 20, 20);
 }
-
-
 
 .github {
   fill: #0a0a09;
