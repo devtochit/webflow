@@ -37,7 +37,7 @@ const sortScores = (result) => {
 const getScoresWithNames = (result, sortedScores) => {
   const finalResult = [];
   sortedScores.map((score) => result.map((item) => (item.score === score
-    ? finalResult.push({ user: item.user, score })
+    ? finalResult.push({ user: item.user, score: item.score })
     : false)));
   return finalResult;
 };
@@ -48,17 +48,18 @@ export const getGameScores = async () => {
 };
 
 export const getData = async () => {
-  const local = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/C1VRLg8Jb50advt7iDv5/scores/');
-  const toDoLists = local.json();
+  const getApiScores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/C1VRLg8Jb50advt7iDv5/scores/');
+  const getScoreFromApi = getApiScores.json();
 
-  return toDoLists.then((data) => {
+  return getScoreFromApi.then((data) => {
     ulList.innerHTML = '';
     // sort scores
     const sortedScores = sortScores(data.result);
     const finallData = getScoresWithNames(data.result, sortedScores);
     // Display result
 
-        return finallData.length ? finallData.map((item, index) => {      // eslint-disable-line
+    // most interesting for me 
+    return finallData.length ? finallData.map((item, index) => {      // eslint-disable-line
 
       if (index === 0) {
         ulList.innerHTML += ` 
