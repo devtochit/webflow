@@ -1,6 +1,7 @@
 import List from './List.js';
 import { sendData } from './api.js';
 
+// add an error message 
 const nameValue = document.querySelector('.add-list');
 const scoreValue = document.querySelector('.add-score');
 
