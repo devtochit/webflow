@@ -4,7 +4,7 @@ this is jesse from enbridge
  the enbrige and the ontero are qualifying home earners for up to 5000$ in rebate 
  and our jobs is just to access for how much of that you qualify for 
  so sir are you available in the morning or better in the afternoon
-hello hlo
+
  he
  
  "Hi,  I'm Jesse, a full-stack developer.
